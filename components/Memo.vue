@@ -5,7 +5,9 @@
       left: `${posX}px`
     }"
     class="memo">
-    <drag-handler />
+    <drag-handler
+    @dragStart="$emit('dragStart',$event)"
+    />
     <text-box
       :text="text"
       @inputed="onInputed" />
