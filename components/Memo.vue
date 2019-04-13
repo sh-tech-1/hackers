@@ -5,9 +5,13 @@
       left: `${posX}px`
     }"
     class="memo">
+    <span
+    class="removeBtn"
+    @click="oncklichd">X</span>
     <drag-handler
     @dragStart="$emit('dragStart',$event)"
-    />
+    >
+    </drag-handler>
     <text-box
       :text="text"
       @inputed="onInputed" />
@@ -51,5 +55,10 @@ export default {
   width: 200px;
   height: 300px;
   background: #ff0;
+}
+.removeBtn{
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 </style>
